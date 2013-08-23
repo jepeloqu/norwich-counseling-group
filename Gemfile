@@ -4,6 +4,10 @@ ruby '2.0.0'
 gem 'rails', '4.0.0.beta1'
 gem 'pg', '0.14.1'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'rspec-rails', '2.13.0'
   gem 'guard-rspec', '2.5.0'
