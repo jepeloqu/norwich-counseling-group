@@ -1,0 +1,73 @@
+/* MIXINS, VARIABLES, ETC. */
+
+$textDefault: #333;
+$bodyBackground: #F2F2F2;
+$link: #0088CC;
+$linkHover: #00293D;
+$navBackground: #F2F2F2;
+$navBorder: #CCC;
+$navBackgroundHover: #FFF;
+
+/* UNIVERSAL */
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+  color: $textDefault;
+  font: 15px/22px Helvetica,Arial,Verdana,sans-serif;
+  line-height: 20px;
+  margin: 0;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $bodyBackground;
+} 
+
+a {
+  color: $link;
+  text-decoration: none;
+    &:hover {
+    color: $linkHover;
+    }
+}
+
+/* IMAGES */
+
+.counselor-image {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.gallery {
+    .gallery-item {
+      float: left;
+    }
+}
+
+/* HEADER */
+
+nav {
+  ul {
+    width: 980px;
+    float: left;
+    margin: 0 0 45px 0;
+    padding: 0;
+    list-style: none;
+    background-color: $navBackground;
+    border: 1px solid $navBorder; 
+    li {
+      float: left;
+      a {
+        display: block;
+        padding: 8px 15px;
+        font-weight: bold;
+        border-right: 1px solid $navBorder;
+        &:hover {
+          background-color: $navBackgroundHover;
+        }
+      }
+    }
+  }
+}
