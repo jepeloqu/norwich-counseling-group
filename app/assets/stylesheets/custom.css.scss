@@ -95,6 +95,8 @@ nav {
         font-weight: bold;
         font-style: italic;
         color: $navText;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
         &:hover {
           background-color: $navBackgroundHover;
           color: $navTextHover;
@@ -107,11 +109,26 @@ nav {
 /* BODY */
 
 #main {
-  margin: auto auto 75px auto;
-  padding: 15px 42px;
+  padding: 20px 40px;
   clear: both;
   background-color: $mainBackground;
   -moz-box-shadow: 0 3px 8px $mainBorderShadowColor;
   -webkit-box-shadow: 0 3px 8px $mainBorderShadowColor;
   box-shadow: 0 3px 8px $mainBorderShadowColor;
+}
+
+section {
+  margin-top: 40px;
+}
+
+span {
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 45px;
+  font-size: 12px;
 }
