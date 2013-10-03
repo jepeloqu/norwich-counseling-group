@@ -1,12 +1,18 @@
 /* MIXINS, VARIABLES, ETC. */
 
 $textDefault: #333;
-$bodyBackground: #F2F2F2;
+$navText: #333;
+$navTextHover: #F2F2F2;
+
 $link: #0088CC;
-$linkHover: #00293D;
-$navBackground: #F2F2F2;
-$navBorder: #CCC;
-$navBackgroundHover: #FFF;
+$linkHover: #000;
+
+$background: #D6D6D6;
+$mainBackground: #F2F2F2;
+$navBackground: #D6D6D6;
+$navBackgroundHover: #333;
+
+$mainBorderShadowColor: #333;
 
 /* UNIVERSAL */
 
@@ -22,7 +28,7 @@ body {
   width: 980px;
   margin-left: auto;
   margin-right: auto;
-  background-color: $bodyBackground;
+  background-color: $background;
 } 
 
 a {
@@ -35,39 +41,77 @@ a {
 
 /* IMAGES */
 
+.banner {
+  padding: 0;
+  -moz-box-shadow: 0 3px 8px $mainBorderShadowColor;
+  -webkit-box-shadow: 0 3px 8px $mainBorderShadowColor;
+  box-shadow: 0 3px 8px $mainBorderShadowColor;
+}
+
 .counselor-image {
   float: left;
   margin: 0 10px 0 0;
 }
 
 .gallery {
-    .gallery-item {
-      float: left;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+    line-height: 0;
+  }
+  .gallery-item {
+    padding: 5px;
+    float: left;
+    .title {
+      margin-left: auto;
+      margin-right: auto;
     }
+  }
 }
 
 /* HEADER */
 
 nav {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+    line-height: 0;
+  }
   ul {
     width: 980px;
     float: left;
-    margin: 0 0 45px 0;
     padding: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
     list-style: none;
     background-color: $navBackground;
-    border: 1px solid $navBorder; 
     li {
-      float: left;
+      float: right;
       a {
         display: block;
         padding: 8px 15px;
         font-weight: bold;
-        border-right: 1px solid $navBorder;
+        font-style: italic;
+        color: $navText;
         &:hover {
           background-color: $navBackgroundHover;
+          color: $navTextHover;
         }
       }
     }
   }
+}
+
+/* BODY */
+
+#main {
+  margin: auto auto 75px auto;
+  padding: 15px 42px;
+  clear: both;
+  background-color: $mainBackground;
+  -moz-box-shadow: 0 3px 8px $mainBorderShadowColor;
+  -webkit-box-shadow: 0 3px 8px $mainBorderShadowColor;
+  box-shadow: 0 3px 8px $mainBorderShadowColor;
 }
