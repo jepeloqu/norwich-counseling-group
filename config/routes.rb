@@ -7,4 +7,5 @@ NorwichCounselingGroup::Application.routes.draw do
   match '/counselor_darran', to: 'static_pages#counselor_darran', via: 'get'
   match '/counselor_kaz', to: 'static_pages#counselor_kaz', via: 'get'
   match '/counselor_camilla', to: 'static_pages#counselor_camilla', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
 end
